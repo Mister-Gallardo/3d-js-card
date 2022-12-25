@@ -149,7 +149,7 @@ button.active {
 
 .purchase button:hover {
     background: transparent;
-    color: hsl(1, 90%, 60%, .9);
+    color: hsl(0, 0%, 95%);
 }
 
 @keyframes rotate {
