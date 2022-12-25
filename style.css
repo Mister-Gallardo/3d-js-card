@@ -17,10 +17,12 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    background: hsl(0, 50%, 75%);
 }
 
 .container {
-    width: 50%;
+    width: 70%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +31,8 @@ body {
 
 .card {
     min-height: 65vh;
-    width: 34rem;
+    width: 100%;
+    max-width: 35rem;
     border-radius: 30px;
     padding: 0rem 5rem;
     transform-style: preserve-3d;
@@ -94,11 +97,14 @@ body {
 .sizes {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     transition: all 1s ease;
 }
 
 .sizes button {
     padding: .75rem 2rem;
+    margin: .5rem;
+
     background: none;
     border: none;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
@@ -136,9 +142,29 @@ button.active {
     cursor: pointer;
 
     transition: all .3s linear;
+    box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
 }
 
 .purchase button:hover {
-    background: hsl(0, 0%, 100%, 1);
+    background: transparent;
     color: hsl(1, 90%, 60%, .9);
+}
+
+@media (max-width: 840px) {
+    .title h1 {
+        font-size: 2.25rem;
+    }
+
+    .description h3 {
+        font-size: 1rem;
+    }
+
+    .circle {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .sneaker img {
+        width: 15rem;
+    }
 }
