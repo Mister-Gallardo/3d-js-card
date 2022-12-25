@@ -12,8 +12,8 @@ const circle = document.querySelector(".circle");
 
 // Moving Mouse events
 container.addEventListener('mousemove', (e) => {
-    let xValue = (window.innerWidth / 2 - e.pageX) / 20;
-    let yValue = (window.innerHeight / 2 - e.pageY) / 20;
+    let xValue = (window.innerWidth / 2 - e.pageX) / 15;
+    let yValue = (window.innerHeight / 2 - e.pageY) / 50;
     card.style.transform = `rotateY(${xValue}deg) rotateX(${yValue}deg)`
 })
 
@@ -24,6 +24,7 @@ container.addEventListener('mouseenter', () => {
     // Pop-up effect
     title.style.transform = "translateZ(150px)";
     sneaker.style.transform = "translateZ(200px) rotateZ(-45deg)";
+    circle.style.transform = "translateZ(50px)"
     description.style.transform = "translateZ(125px)";
     sizes.style.transform = "translateZ(100px)";
     purchase.style.transform = "translateZ(75px)";
@@ -40,6 +41,7 @@ container.addEventListener('mouseleave', () => {
     // Pop-out effect
     title.style.transform = "translateZ(0px)";
     sneaker.style.transform = "translateZ(0px) rotateZ(0deg)";
+    circle.style.transform = "translateZ(0px)"
     description.style.transform = "translateZ(0px)";
     sizes.style.transform = "translateZ(0px)";
     purchase.style.transform = "translateZ(0px)";
